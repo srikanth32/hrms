@@ -40,7 +40,7 @@ func init() {
 	// http.Handle("/static/", http.StripPrefix("/static/",
 	// 	http.FileServer(http.Dir(repoFrontend))))
 	db, err = sql.Open("mysql", "root:root@/hrms")
-	_, err := template.ParseGlob("src/*.js")
+	//_, err := template.ParseGlob("src/*.js")
 	if err != nil {
 		log.Fatal("Error loading templates:" + err.Error())
 	}
@@ -94,4 +94,20 @@ func personalDetails(res http.ResponseWriter, req *http.Request) {
 
 func homePage(res http.ResponseWriter, req *http.Request) {
 	http.ServeFile(res, req, "index.js")
+}
+
+func main() {
+
+	defer db.Close()
+
+	err = db.Ping()
+	if err != nil {
+		panic(err.Error())
+	}
+	//http.HandleFunc("/AddEmployee", userForm)
+	http.HandleFunc("/personalDetails", personalDetails)
+	http.HandleFunc("/Home", homePage)
+	//http.HandleFunc("/login", loginPage)
+	//http.HandleFunc("/", homePage)
+	http.ListenAndServe(":8080", nil)
 }
