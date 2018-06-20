@@ -1,0 +1,82 @@
+#myteamLeft{
+  position:relative;
+  bottom:2vw;
+  right:3vw;
+color:grey;
+
+}
+#myteamRight{
+
+position:relative;
+  bottom:2vw;
+left:3.4vw;
+color:grey;
+}
+.teamname{
+  color:orange;
+text-align: center;
+margin-right: 2.8vw;
+
+}
+.teamdesign{
+  color:blue;
+position:relative;
+top:-1vw;
+left:-1vw;
+}
+.teamrow{
+  margin-left:2vw;
+}
+
+.linestyle{
+  background-color:lightgray;
+  height:0.08vw;
+  position:relative;
+  top:-0.7vw;
+}
+#divider{
+  border-right:1px solid orange;
+  line-height:10px;
+  margin-left:1vw;
+}
+.cardheading{
+  text-align: center;
+  position:relative;
+  top:0.7vw;
+  font-size:1.2vw;
+}
+
+#RowStyle{
+  margin-top:1vw;
+  margin-bottom:1vw;
+
+}
+.cardstyle{
+margin-right:-1vw;
+padding-left:10vw;
+  height:14vw;
+  box-shadow:-0.01px 3px 8px 0.1px gray;
+}
+.cardstyle1{
+  height:20vw;
+   background-color:#FFFFFF;
+
+
+     box-shadow:-0.01px 3px 8px 0.1px gray !important;
+}
+#imgstyle{
+  background-color:'red' !important;
+}
+.displaycontainer{
+  background-color:#F9F9F9;
+  min-height:700px;
+  overflow:hidden;
+  margin-top:-1.5vw;
+  padding:6vw 10vw 0vw 10vw;
+}
+.leavesdiv{
+  margin-top:5vw;
+}
+.leavesdiv button{
+  margin-right:2vw;
+}

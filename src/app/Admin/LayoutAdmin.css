@@ -1,0 +1,35 @@
+#inputstyle{
+  width:100%;
+  height:2vw;
+  font-size:0.7vw;
+  box-shadow:none !important;
+   border-color:#D7D7D7 !important;
+}
+.labelStyle1{
+  font-size:0.8vw;
+  margin-bottom:-1vw;
+  position:relative;
+  left:-10vw;
+}
+.labelStyle2{
+  font-size:0.8vw;
+  margin-bottom:-1vw;
+  position:relative;
+  left:-9.5vw;
+}
+#modalbutton{
+color:black;
+}
+
+#modalbutton:checked{
+    text-decoration: line-through;
+    color:blue;
+}
+#savebtn{
+position:relative;
+left:46vw;
+bottom:0.5vw;
+
+  width:10%;
+  height:2vw;
+}

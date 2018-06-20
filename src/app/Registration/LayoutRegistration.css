@@ -1,0 +1,417 @@
+.containerRegistration{
+  background-color:#2C3E50;
+  margin:0;
+  position:fixed;
+  top:0;
+  right:0;
+  left:0;
+  bottom:0;
+
+height:634.5px;
+
+}
+#outline{
+
+color:white !important;
+outline:none;
+text-decoration:none !important;
+}
+@media only screen and (max-width:320px){
+  .registration{
+    position:relative;
+    top:30vw !important;
+    left:35vw;
+  }
+  .registrationheader{
+    position:relative;
+    bottom:5vw !important;
+    left:12vw;
+    font-size:36px !important;
+  }
+  #forminput{
+position:relative;
+right:20vw !important;
+   width:70% !important;
+  }
+}
+@media screen and (max-width:768px) {
+  .containerRegistration{
+    min-height:535px !important;
+    overflow:hidden !important;
+  }
+  .logo{
+    font-size:3vw !important;
+  }
+  .floatingtext1{
+    font-size:1.4vw !important;
+  }
+  .insidefloating1{
+      font-size:1.4vw !important;
+  }
+  .text{
+    font-size:1.6vw !important;
+  }
+  .pagetext{
+    font-size:1.4vw !important;
+  }
+  #imgStyle{
+    width:30.8vw !important;
+    height:24vw !important;
+    margin-bottom:4vw;
+  }
+  .back{
+    float:right;
+    position:relative;
+    top:8vw !important;
+    right:5.5vw;
+
+  }
+  #featureHeading{
+    color:white;
+    font-size:2.5vw !important;
+    position:relative;
+    right:-5vw !important;
+  }
+  #featuretext{
+    position:relative;
+    top:3vw;
+    right:-5vw !important;
+    font-size:1.7vw !important;
+    color:white;
+  }
+  .list{
+    font-size:1.3vw !important;
+  }
+  .registrationheaderLogin{
+    font-size:1.7vw !important;
+  }
+  .lasttext3{
+    color:white;
+    position:relative;
+    top:4vw;
+    left:6.5vw !important;
+    font-size:0.75;
+  }
+  .registrationheader{
+    font-size:1.7vw !important;
+  }
+  .lasttext{
+    color:white !important;
+    text-decoration: none !important;
+    position:relative;
+    top:3vw;
+    left:7.5vw !important;
+  }
+  .otptext1{
+    color:white !important;
+    font-size:1.5vw !important;
+    position:relative;
+    right:7.5vw !important;
+  }
+  .lasttext1{
+    font-size:1.3vw !important;
+    position:relative;
+    right:10vw !important;
+  }
+  #submit{
+    position:relative;
+    top:4.5vw !important;
+    margin-bottom:3vw !important;
+    background-color:#2C3E50 !important;
+    box-shadow:none;
+    border:0.5px solid #B6E3EF;
+    color:white;
+    width:9%;
+  }
+  .passwordheader{
+    font-size:1.7vw !important;
+  }
+  .ptext{
+    position:relative;
+  left:-7vw !important;
+  }
+}
+@media screen and (max-width: 1366px) {
+
+  #submit{
+    position:relative;
+    top:2vw;
+    background-color:#2C3E50 !important;
+    border:0.5px solid #B6E3EF;
+    width:15%;
+    left:10.9vw;
+  }
+
+}
+.submitLink{
+  color:white;
+}
+.submitLink:focus{
+  color:white;
+}
+.logo{
+  font-size:2vw;
+  font-family:serif;
+  color:red;
+  position:relative;
+  left:8vw;
+}
+.footerLine{
+  padding-left:8vw;
+    background-color:#2C3E50;
+    height:2vw;
+}
+.footerSpan{
+float:right;
+position:relative;
+top:0.6vw;
+right:5.6vw;
+}
+.footercontent{
+  position:relative;
+  bottom:0.5vw;
+  color:white !important;
+  font-size:0.7vw;
+  font-family:sans-serif;
+}
+.text{
+  color:white;
+  position:relative;
+  top:5.3vw;
+  left:8vw;
+  font-size:1.2vw;
+  font-family:sans-serif;
+}
+.floatingtext{
+  font-size:0.9vw;
+  position:relative;
+  left:63vw;
+  color:#D0D3D4;
+}
+#forminput{
+  border-color:#B6E3EF   !important;
+  background-color:#2C3E50;
+  box-shadow:none;
+  color:white;
+ width:30%;
+}
+#forminput1{
+  border-color:white  !important;
+  background-color:#2C3E50;
+  box-shadow:none;
+  color:white;
+ width:30%;
+}
+#otptext{
+background-color:#2C3E50 !important;
+border:none;
+border-bottom:1px solid #B6E3EF;
+width:40px;
+position:relative;
+top:0.8vw;
+margin-right:1vw;
+height:20px;
+color:white;
+text-align: center;
+}
+#otptext:focus{
+box-shadow:red;
+
+}
+#ios{
+  position:relative;
+  left:7.5vw;
+}
+.otpdiv{
+  position:relative;
+  top:3vw;
+
+}
+.otptext1{
+  color:white !important;
+  font-size:0.95vw;
+}
+
+.registration{
+  position:relative;
+  top:5vw;
+  left:35vw;
+}
+.registrationheader{
+  position:relative;
+  bottom:3vw;
+  left:12vw;
+  color:red;
+  font-size:1vw;
+}
+.passwordheader{
+  position:relative;
+  bottom:3vw;
+  left:14vw;
+  color:red;
+  font-size:1vw;
+}
+.registrationheaderLogin{
+  position:relative;
+  bottom:3vw;
+  left:13vw;
+  color:red;
+  font-size:1vw;
+}
+.lasttext{
+  color:white !important;
+  text-decoration: none !important;
+  position:relative;
+  top:3vw;
+  left:11vw;
+}
+.lasttext1{
+  color:white !important;
+  position:relative;
+  top:4vw;
+  left:6vw;
+  font-size:0.85vw;
+}
+.lasttext3{
+  color:white;
+  position:relative;
+  top:4vw;
+  left:10vw;
+  font-size:0.75;
+}
+.lasttext2{
+  position:relative;
+  left:8vw;
+  color:white !important;
+}
+.hyperlink1{
+  color:white !important;
+  text-decoration: none !important;
+}
+.ptext{
+  position:relative;
+  left:3vw;
+  color:white;
+}
+#submit{
+  position:relative;
+  top:3.5vw;
+  margin-bottom:2vw;
+  background-color:#2C3E50 !important;
+  box-shadow:none;
+  border:0.5px solid #B6E3EF;
+  color:white;
+  width:9%;
+}
+.hyperlink{
+  color:#FFFFFF !important;
+  text-decoration: none !important;
+}
+.list{
+  position:relative;
+  top:2vw;
+  font-size:0.9vw;
+}
+.rowStyle{
+  position:relative;
+  left:8vw;
+  top:7vw;
+margin-right:12.5vw;
+}
+.rowStyle1{
+  position:relative;
+  left:8.2vw;
+  top:7vw;
+margin-right:12.5vw;
+}
+.insidefloating{
+  position:relative;
+right:3vw;
+}
+#imgStyle{
+  width:19vw;
+  height:18vw;
+}
+#imgStyle1{
+  width:19vw;
+  height:18vw;
+  transition-delay: 5s !important;
+}
+#cardStyle{
+  background-color: #9DB4D2;
+  height:18vw;
+}
+#cardStyle2{
+  background-color: #9DB4D2;
+  height:18vw;
+}
+#featureHeading{
+  color:white;
+  font-size:1.5vw;
+  position:relative;
+  right:7vw;
+}
+#featuretext{
+  position:relative;
+  top:3vw;
+  right:7vw;
+  font-size:1vw;
+  color:white;
+}
+.list li{
+  padding-bottom:0.7vw;
+}
+.back{
+  float:right;
+  position:relative;
+  top:10vw;
+  right:5.5vw;
+  color:white;
+}
+.floatingtext1{
+  font-size:0.9vw;
+  position:relative;
+bottom:1.8vw;
+  left:89vw;
+  color:#FFFFFF;
+}
+.insidefloating1{
+    font-size:0.9vw;
+  position:relative;
+  right:3vw;
+}
+.hrStyle{
+  background-color:red;
+  position:relative;
+  top:4vw;
+  left:8vw;
+  margin-right:13.5vw;
+}
+.pagetext{
+  color:#D0D3D4;
+  font-size:0.9vw;
+  font-family:sans-serif;
+  position:relative;
+  top:4vw;
+  left:8vw;
+}
+.content{
+  position:relative;
+  top:4vw;
+}
+.formstyle{
+  position:relative;
+  top:3vw;
+  left:3vw;
+}
+#viewfeatures{
+  position:relative;
+  top:15vw;
+  left:8vw;
+  background-color:#2C3E50 !important;
+  border-color:white !important;
+  box-shadow:none !important;
+  border:0.5px solid white;
+  color:white;
+  width:14%;
+}
