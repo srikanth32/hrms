@@ -11,14 +11,14 @@ labelStyle1,hyperLinkEmployee,slideremp,sliderline,sliderlineorange,slidertext} 
   import {Header} from "../Header";
   import {Footer} from "../Footer";
   import $ from 'jquery';
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 var URL = 'http://localhost:3033/';
+
 export class PersonalDetails extends React.Component{
-   registerData(){
+  registerData(){
     var obj = new Object();
 
-    alert($("#fathersname").val());
+    
     obj["fathersname"] = $("#fathersname").val();
     obj["dob"] = $("#dob").val();
     obj["gender"] = $("#gender").val();
@@ -53,7 +53,30 @@ export class PersonalDetails extends React.Component{
         }
     });
 }
+  constructor(props){
+ super(props);
+  this.state = {
+    fathersName: '',
+    display:false
+  }
+}
+displayText(){
+  return(
+    <div>Your Entered Details Are:<br/>
+{this.state.fathersName}<br/>
+    </div>
+  );
+}
+setDisplay(){
+  this.setState({
+    display:!this.state.display,
+    empName:'',
+    empID:''
+  })
+}
+
   render() {
+    var displaytxt=this.displayText();
     return(
       <div>
       <Header/>
@@ -63,64 +86,64 @@ export class PersonalDetails extends React.Component{
 <hr className={hrStyle}/>
 <Row>
 <Col xs="10">
-      <Form className={formStyle} >
+      <Form className={formStyle} method="post" action="/personalDetails">
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Fathers Name</label>
-          <input type="text" class="form-control"  name= "fathersname" id="fathersname" placeholder="" required/>
+    <Input type="text"  className={inputstyle} id="fathersname" placeholder="" />
 
         </div>
         <div class="col-md-5 mb-3" style={{marginRight:'3vw'}}>
           <label className={labelStyle1}>DOB</label>
-          <input type="text" class="form-control" id="dob" name="dob"  placeholder="" />
+        <Input type="text"  className={inputstyle} id="dob" placeholder="" />
         </div>
         </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Gender</label>
-            <input type="text" class="form-control" id="gender" name="gender" placeholder="" />
+            <Input type="text"  className={inputstyle} id="gender" placeholder="" />
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Phone</label>
-            <input type="text" class="form-control" id="phone" name="phone" placeholder="" />
+        <Input type="text"  className={inputstyle} id="phone" placeholder="" />
           </div>
           </div>
           <div class="form-group">
       <label className={labelStyle1}>Permannet Address</label>
-      <textarea class="form-control" id={inputstyletextarea} id="add" name="add"rows="3"></textarea>
+      <Input type="textarea" className={inputstyletextarea} id="add" />
     </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Nationality</label>
-            <input type="text" class="form-control" id="nationality" name="nationality"  placeholder=""/>
+    <Input type="text"  className={inputstyle} id="nationality" placeholder="" />
 
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Marital Status</label>
-            <input type="text" class="form-control"id="status" name="status" placeholder="" />
+          <Input type="text"  className={inputstyle} id="status" placeholder="" />
           </div>
           </div>
            </Form>
         <p className={pageHeading}>Emergency Contact Details</p>
-        <Form className={formStyle} >
+        <Form className={formStyle} method="post" action="/personalDetails">
           <div class="form-row">
             <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Contact Person Name</label>
-              <input type="text" class="form-control" id="contactname" name="contactname"  placeholder=""/>
+          <Input type="text"  className={inputstyle} id="contactname" placeholder="" />
             </div>
             <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Phone</label>
-              <input type="text" class="form-control" id="emergencyphone" name="emergencyphone" placeholder="" />
+              <Input type="text"  className={inputstyle} id="emergencyphone" placeholder="" />
             </div>
             </div>
               <div class="form-row">
                 <div class="col-md-5 mb-3">
                   <label className={labelStyle1}>Relationship</label>
-                  <input type="text" class="form-control"  id="relationship"name="relationship" placeholder=""/>
+                <Input type="text"  className={inputstyle} id="relationship" placeholder="" />
                 </div>
                 <div class="col-md-5 mb-3">
                   <label className={labelStyle1}>Email ID</label>
-                  <input type="text" class="form-control" id="email"name="email"  placeholder="" />
+                <Input type="email"  className={inputstyle} id="email" placeholder="" />
                 </div>
                 </div>
           </Form>
@@ -145,14 +168,23 @@ export class PersonalDetails extends React.Component{
             <p><Link to="/EmpDocs" className={hyperLinkEmployee}>Employee Documents</Link></p>
             </div>
           </Col>
+          <Col>
+          {this.state.display ?
+             <span>{displaytxt}</span>
+             :
+             ''}
+          </Col>
+
           </Row>
-    <Link to="/ProfessionalDetails" >  <button type="button" onClick={(e) => this.registerData(e)} class="btn btn-outline-warning" >
-             Save</button></Link>
+   <button type="button" class="btn btn-outline-warning" onClick={(e) => this.registerData(e)}>
+             Save</button>
           <Link to="/ProfessionalDetails"  id={skipstyle}>Skip</Link>
           <span className={floatRight}>
-          <Link to="/ProfessionalDetails" className={hyperLinkEmployee}>
-          <button type="submit" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIcon} /></button>
-          </Link>
+
+   <Link to="/ProfessionalDetails" className={hyperLinkEmployee}>
+            <button type="submit" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIcon} /></button>
+            </Link>
+
           </span>
           <div>
           </div>

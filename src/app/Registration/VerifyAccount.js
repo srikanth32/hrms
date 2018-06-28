@@ -5,6 +5,8 @@ import {containerRegistration,content,registrationheader,registration,otpdiv,
 import {Link} from "react-router-dom";
 import {Row} from "reactstrap";
 import {FooterText} from "./Footertext";
+import {Button} from "reactstrap";
+
 
 export class VerifyAccount extends React.Component{
   render(){
@@ -19,15 +21,16 @@ export class VerifyAccount extends React.Component{
 
 <div className={otpdiv}>
 <form id={ios}>
-    <input type="text" maxlength="1"  id={otptext}/>
-    <input type="text" maxlength="1"  id={otptext}/>
-    <input type="text" maxlength="1"  id={otptext}/>
-    <input type="text" maxlength="1" id={otptext}/>
-
+    <input type="text" maxlength="1"  className={otptext}/>
+    <input type="text" maxlength="1"  className={otptext}/>
+    <input type="text" maxlength="1"  className={otptext}/>
+    <input type="text" maxlength="1" className={otptext}/>
 </form>
-<button type="submit" class="btn btn-light" id={submit}>  <Link to="/CreatePassword" id={outline}>
+
+
+<Button outline className={submit}> <Link to="/CreatePassword" id={outline}>
 Submit</Link>
-  </button>
+  </Button>
   <p className={lasttext1}>Resend OTP<span ><Link to="/SignUp" className={lasttext2}>Change Number</Link></span></p>
   </div>
 

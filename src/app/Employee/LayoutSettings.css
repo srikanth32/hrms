@@ -1,3 +1,6 @@
+@media only screen and (max-width: 320px){
+
+}
 @media only screen and (max-width: 768px){
   #cardStyle{
     width:8.3rem !important;
@@ -18,7 +21,6 @@
     width:12.5vw !important;
   }
 #cardTitle{
-
   font-size:1.2vw !important;
 }
 #cardStyletab{

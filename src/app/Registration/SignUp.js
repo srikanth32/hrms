@@ -3,9 +3,40 @@ import {LogoHeader} from "./LogoHeader";
 import {containerRegistration,content,registrationheader,registration,forminput,submit,lasttext,hyperlink,submitLink} from "./LayoutRegistration.css";
 import {Link} from "react-router-dom";
 import {FooterText} from "./FooterText";
-import styles from "./LayoutRegistration.css";
-
+import {Input,Button} from "reactstrap";
+import $ from 'jquery';
+var URL = 'http://localhost:3033/';
 export class SignUp extends React.Component{
+  signUpdata(){
+    var obj = new Object();
+
+    
+    obj["name"] = $("#name").val();
+    obj["email"] = $("#email").val();
+    obj["phone"] = $("#phone").val();
+    console.log(obj)
+    $.ajax({
+        url: URL + '/SignUp',
+        type: 'GET',
+        data: { json: JSON.stringify(obj) },
+        cache: false,
+        success: function (response) {
+            response = JSON.parse(response);
+            console.log(response)
+            if (response.Status === 'true') {
+                alert(response.Message);
+            } else {
+                alert(response.Message);
+            }
+        },
+        error: function () {
+            alert('Unable to update job details !!!');
+        },
+        complete: function () {
+            //self.container.dataLoader('hide');
+        }
+    });
+}
   render(){
     return(
       <div>
@@ -16,17 +47,16 @@ export class SignUp extends React.Component{
       <p className={registrationheader}>Registration</p>
       <form>
       <div class="form-group">
-        <input type="text" class="form-control" name="name" id={styles.forminput}  placeholder="Name"/>
+      <Input type="text"  className={forminput} id="name" placeholder="Name" />
       </div>
   <div class="form-group">
-    <input type="email" class="form-control" name="email" id={forminput}  aria-describedby="emailHelp" placeholder="Email ID"/>
+  <Input type="email"  className={forminput} id="email" placeholder="Email ID" />
   </div>
   <div class="form-group">
-    <input type="text" class="form-control"  name="phone" id={forminput} placeholder="Phone"/>
+  <Input type="phone" className={forminput} id="phone" placeholder="Phone" />
   </div>
-  <Link to="/VerifyAccount"><button type="submit" class="btn btn-primary" id={submit}>
-  Submit
-  </button></Link>
+  <Link to="/VerifyAccount"><Button outline className={submit} onClick={(e) => this.signUpdata(e)}>Submit</Button>
+  </Link>
 </form>
 <p className={lasttext}>Existing user? <Link to="/Login" className={hyperlink}>Log In</Link></p>
       </div>

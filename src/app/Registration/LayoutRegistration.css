@@ -1,17 +1,11 @@
 .containerRegistration{
   background-color:#2C3E50;
-  margin:0;
-  position:fixed;
-  top:0;
-  right:0;
-  left:0;
-  bottom:0;
-
+  margin:0 auto;
+  width:100%;
 height:634.5px;
 
 }
 #outline{
-
 color:white !important;
 outline:none;
 text-decoration:none !important;
@@ -28,7 +22,7 @@ text-decoration:none !important;
     left:12vw;
     font-size:36px !important;
   }
-  #forminput{
+  .forminput{
 position:relative;
 right:20vw !important;
    width:70% !important;
@@ -113,7 +107,7 @@ right:20vw !important;
     position:relative;
     right:10vw !important;
   }
-  #submit{
+  .submit{
     position:relative;
     top:4.5vw !important;
     margin-bottom:3vw !important;
@@ -133,7 +127,7 @@ right:20vw !important;
 }
 @media screen and (max-width: 1366px) {
 
-  #submit{
+  .submit{
     position:relative;
     top:2vw;
     background-color:#2C3E50 !important;
@@ -188,7 +182,7 @@ right:5.6vw;
   left:63vw;
   color:#D0D3D4;
 }
-#forminput{
+.forminput{
   border-color:#B6E3EF   !important;
   background-color:#2C3E50;
   box-shadow:none;
@@ -202,21 +196,20 @@ right:5.6vw;
   color:white;
  width:30%;
 }
-#otptext{
+.otptext{
 background-color:#2C3E50 !important;
 border:none;
 border-bottom:1px solid #B6E3EF;
 width:40px;
-position:relative;
-top:0.8vw;
 margin-right:1vw;
-height:20px;
 color:white;
 text-align: center;
 }
-#otptext:focus{
-box-shadow:red;
-
+.otptext:focus{
+outline:none !important;
+}
+.otptext:hover{
+  outline:none;
 }
 #ios{
   position:relative;
@@ -293,7 +286,7 @@ box-shadow:red;
   left:3vw;
   color:white;
 }
-#submit{
+.submit{
   position:relative;
   top:3.5vw;
   margin-bottom:2vw;

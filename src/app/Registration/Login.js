@@ -2,9 +2,9 @@ import React from "react";
 import {LogoHeader} from "./LogoHeader";
 import {containerRegistration,content,viewfeatures,
   registrationheaderLogin,registration,forminput,submit,lasttext3,hyperlink,submitLink} from "./LayoutRegistration.css";
-  import styles from "./LayoutRegistration.css";
 import {Link} from "react-router-dom";
 import {FooterText} from "./FooterText";
+import {Input,Button} from "reactstrap";
 
 export class Login extends React.Component{
   render(){
@@ -18,15 +18,14 @@ export class Login extends React.Component{
       <form>
 
   <div class="form-group">
-    <input type="email" class="form-control" id={styles.forminput}  aria-describedby="emailHelp" placeholder="Email ID" required/>
+<Input type="email" className={forminput} placeholder="Email ID" />
   </div>
   <div class="form-group">
-    <input type="password" class="form-control" id={forminput}  placeholder="Password" required/>
+    <Input type="password"  className={forminput} placeholder="Password" />
   </div>
 
-  <Link to="/DemoPage"><button type="submit" class="btn btn-light" id={submit}>
-Submit
-  </button></Link>
+  <Link to="/DemoPage"> <Button outline className={submit}>Submit</Button>
+</Link>
 
 </form>
 <p className={lasttext3}>Create New user? <Link to="/SignUp" className={hyperlink}>Sign Up</Link></p>
