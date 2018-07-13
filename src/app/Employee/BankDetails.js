@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Form, FormGroup, Label, Input, FormText,Row } from 'reactstrap';
-import {DatePicker,Slider,TextField} from 'material-ui';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 import Icon from 'react-icons-kit';
 import {arrowLeft2, arrowRight2,pencil,search} from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
@@ -19,9 +18,12 @@ export class BankDetails extends React.Component{
     super(props);
     this.nextmanual=this.nextmanual.bind(this);
     this.nextauto=this.nextauto.bind(this);
+
+
     this.state = {
       manualcomponents:false,
-      autocomponents:false
+      autocomponents:false,
+      AnnualCTC:''
     };
   }
   nextmanual(){
@@ -50,6 +52,7 @@ export class BankDetails extends React.Component{
         );
       }
     }
+
   render() {
 var manualcomponents = this.manualdisplay();
 var autocomponents = this.autodisplay();
@@ -74,59 +77,64 @@ var autocomponents = this.autodisplay();
       <div class="form-row">
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Account Holder Name</label>
-          <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+          <Input type="text"  className={inputstyle}  pattern="[A-Za-z]{1,25}$"  required />
         </div>
         <div class="col-md-5 mb-3">
           <label className={labelStyle1}>Bank Name</label>
-          <input type="text" class="form-control" id={inputstyle} placeholder="" />
+    <Input type="text"  className={inputstyle} pattern="[A-Za-z]{1,25}$" required/>
         </div>
         </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Branch Name</label>
-            <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+  <Input type="text"  className={inputstyle} pattern="[A-Za-z]{1,25}$" required />
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Account Number</label>
-            <input type="text" class="form-control" id={inputstyle} placeholder="" />
+            <Input type="text" pattern="^\d{12}$" className={inputstyle} placeholder="12 digit A/c no"  required/>
           </div>
           </div>
         <div class="form-row">
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>IFSC Code</label>
-            <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+        <Input type="text"  className={inputstyle} pattern="^\d{11}$" placeholder="IFSC Code" maxlength={11} required />
           </div>
           <div class="col-md-5 mb-3">
             <label className={labelStyle1}>Account Type</label>
-            <input type="text" class="form-control" id={inputstyle} placeholder="" />
+          <Input type="text"  className={inputstyle} placeholder="Type of Account" maxlength={25} required/>
           </div>
           </div>
-</Form>
+
 <p className={pageHeading} style={{marginTop:'2vw'}}>Salary Component</p>
 
 <div class="form-row">
   <div class="col-md-3 mb-3">
     <label className={labelStyle1}>Annual CTC</label>
-    <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+    <Input type="text"  className={inputstyle} pattern="^\d{1,10}$"
+
+
+     required/>
   </div>
   <div class="col-md-3 mb-3">
     <label className={labelStyle1}>Monthly CTC</label>
-    <input type="text" class="form-control" id={inputstyle} placeholder="" />
+  <Input type="text"  className={inputstyle}  maxlength={25}
+
+  required/>
   </div>
   </div>
-  <form class="form-inline">
+  <div class="form-inline">
 <div class="form-group">
 <label for="inputPassword6" className={labelStyle1}>Salary Break up</label>
 <button class="btn btn-outline-warning" onClick={this.nextmanual.bind(this)} id={btnManual}>Manual</button>
 <button class="btn btn-outline-warning" onClick={this.nextauto.bind(this)} id={btnAuto}>Auto</button>
 </div>
-</form>
+</div>
 {manualcomponents}
 {autocomponents}
 <div className={bankdiv}>
-<Link to="/LoginInfo">
-<button type="button" class="btn btn-outline-warning"  id={savebtn1}>Save</button>
-</Link>
+
+  <Input type="submit" value="SAVE"  className={savebtn1} style={{width:'20%'}}/>
+
 <Link to="/LoginInfo" id={skip1}>Skip </Link>
 
              <span className={floatRight2}>
@@ -143,6 +151,7 @@ var autocomponents = this.autodisplay();
              </Link>
                 </span>
                 </div>
+            </Form>
 
        </div>
        <Footer/>

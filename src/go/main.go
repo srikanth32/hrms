@@ -35,6 +35,9 @@ func main() {
 	router := http.NewServeMux()
 	router.HandleFunc("/PersonalDetails", personalDetails)
 	router.HandleFunc("/SignUp", signUp)
+	router.HandleFunc("/AddClaims", addClaims)
+	router.HandleFunc("/ClaimList", claimsList)
+
 	handler := cors.AllowAll().Handler(router)
 	http.ListenAndServe(":3033", handler)
 }

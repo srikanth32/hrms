@@ -72,4 +72,4 @@ export class EmpDocs extends React.Component{
        </div>
      );
    }
- }
+}

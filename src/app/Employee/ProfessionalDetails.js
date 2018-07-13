@@ -216,4 +216,4 @@ export class ProfessionalDetails extends React.Component{
        </div>
      );
    }
- }
+}

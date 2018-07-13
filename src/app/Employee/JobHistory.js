@@ -112,4 +112,4 @@ export class JobHistory extends React.Component{
 
      );
    }
- }
+}

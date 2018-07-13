@@ -1,194 +1,971 @@
-#modal{
-  margin-top:5vw;
-  text-decoration: none !important;
-  color:orange;
-}
-
-#example1{
-  text-align:center;
-}
-#example1 thead > tr{
-background-color:#7092BE;
-color:white;
-font-size:0.9vw;
-}
-
-#example1 tbody > tr{
-  background-color:white;
-  font-size:0.95vw;
-color:grey;
-  border-top:10px solid #F9F9F9;
-   box-shadow:-0.01px 6.5px 10px -3.5px lightgray;
-
-}
-#btnstyle{
-  background-color:#25AAE1 !important;
-  color:white !important;
-position:relative;
-left:37vw;
-
-height:2vw;
-font-size:1vw;
-
-}
-#btnstyle:hover{
-  color:black !important;
-}
-
-
-
-#example1 td{
-
-
-}
-#example1 th{
-
-
-
-  margin-top:5vw;
-
-z-index:1;
-}
-#dropdownmenu{
-  border:none !important;
-  box-shadow:none !important;
-  background-color:#F8F8F8 !important;
-  margin-left:15px;
-  height:100px;
-}
-#dropdownmenu li:hover{
-  background-color:red;
-  cursor:pointer;
-}
-.pagecontent{
-  padding:5vw 10vw 0vw 10vw;
-  background-color:#F9F9F9;
-  height:500px;
-}
-.hrid{
-  background-color:#E6E6E6;
-  height:0.1vw;
-}
-.border{
+.hiddenInput{
   position:relative;
-  top:1.2vw;
-  width:6vw;
-  padding-left:0.7vw;
-border-bottom:2px solid #4AD496;
-}
-
-
-
-@media only screen and (min-width:320px) {
-  .hyperLinkLogo{
-    font-size:2vw !important;
-    color:blue !important;
+  top:2vw;
   }
-}
-
-
-.testdiv{
-  background:
-  /* top, transparent red, faked with gradient */
-  linear-gradient(
-
-    rgb(44, 62, 80,0.50),
-    rgb(44, 62, 80,0.50)
-  ),
-  /* bottom, image */
-  url('./login.jpg');
-
-
-  background-repeat:no-repeat;
-width:50%;
-  height:500px;
-
-}
-
-
-.imageoverlay{
-
-
-}
-@media only screen and (max-width: 1024px) {
-  .navitemStyle{
-    margin-right:-0.8vw !important;
+  .icon{
+    background-color: white;
+     border: none;
+     color: black;
+     padding: 12px 16px;
+     font-size: 16px;
+     cursor: pointer;
+  }
+  .icon:hover{
+    background-color:white;
+      outline:none;
+  }
+  .icon:focus{
+    outline:none;
+  }
+  
+  .radiostyle{
+  position:relative;
+  right:0.3vw;
+  top:0.2vw;
+  
+  }
+  .radioinput{
+    color:black;
+    font-size: 0.9vw;
+    font-weight:normal;
+   font-style:arial;
+  }
+  .radiorow{
     position:relative;
-    top:3vw !important;
+    top:0.3vw;
+    right:2vw;
   }
-  .navitemStyleHome{
-    position:relative;
-    top:4.8vw !important;
-  }
-  #navStyle{
-    position:relative;
-    left:1.8vw !important;
-  }
-}
-@media only screen and (max-width: 320px){
-  .pageHeading{
-
-  }
-}
-@media only screen and (max-width: 768px) {
-.exploreDiv{
-  margin-top:277px !important;
-}
-  .displayContainer{
-        padding:2vw 7vw 0vw 8vw !important;
+  @media only screen and (max-width:320px) {
+    .hyperLinkLogo{
+      font-size:2vw !important;
+      color:blue !important;
+    }
+    .cardStyle{
+    width:75vw;
+    margin-left:6vw;
+    margin-bottom:2vw;
+     border:none;
+     box-shadow:-0.01px 3px 1px 0.1px grey;
+    }
+    #cardTextStyle{
+    }
+    .displayContainer{
+          padding:0.5vw 7vw 0vw 8vw !important;
+          width:100% !important;
+          overflow-x:auto !important;
+          min-height:600px !important;
+          overflow:auto !important;
+    }
+    .displayHome{
         width:100% !important;
-        overflow-x:auto !important;
-        min-height:600px !important;
-        overflow:auto !important;
+        margin-top:5.5vw !important;
+    }
   }
-  .pageHeading{
-    font-size:1.6vw !important;
+  #modal{
+    margin-top:5vw;
+    text-decoration: none !important;
+    color:orange;
   }
-  .copyrighticon{
-  position:relative;
-  top:0.7vw !important;
-  right:0.3vw !important;
+  #example1{
+    text-align:center;
   }
-  .footerlogo{
-    font-size: 1vw !important;
+  #example1 thead > tr >th {
+    border-right:1px solid orange;
+  }
+  #example1 thead > tr > th:last-child{
+    border:none;
+  }
+  #example1 thead > tr{
+  background-color:#7092BE;
+  color:white;
+  font-size:0.9vw;
+  }
+  #example1 tbody > tr{
+    background-color:white;
+    font-size:0.95vw;
+    color:grey;
+    border-top:10px solid #F9F9F9;
+    box-shadow:-0.01px 6.5px 10px -3.5px lightgray;
+  }
+  #btnstyle{
+    background-color:#25AAE1 !important;
+    color:white !important;
+    position:relative;
+    left:37vw;
+   height:2vw;
+   font-size:1vw;
+  }
+  #btnstyle:hover{
+    color:black !important;
+  }
+  
+  #example1 td{
+  
+  
+  }
+  #example1 th{
+  
+  
+  
+    margin-top:5vw;
+  
+  z-index:1;
+  }
+  #dropdownmenu{
+    border:none !important;
+    box-shadow:none !important;
+    background-color:#F8F8F8 !important;
+    margin-left:15px;
+    height:100px;
+  }
+  #dropdownmenu li:hover{
+    background-color:red;
+    cursor:pointer;
+  }
+  .pagecontent{
+    padding:5vw 10vw 0vw 10vw;
+    background-color:#F9F9F9;
+    height:500px;
+  }
+  .hrid{
+    background-color:#E6E6E6;
+    height:0.1vw;
+  }
+  .border{
+    position:relative;
+    top:1.2vw;
+    width:6vw;
+    padding-left:0.7vw;
+  border-bottom:2px solid #4AD496;
+  }
+  
+  
+  
+  
+  
+  .testdiv{
+    background:
+    /* top, transparent red, faked with gradient */
+    linear-gradient(
+  
+      rgb(44, 62, 80,0.50),
+      rgb(44, 62, 80,0.50)
+    ),
+    /* bottom, image */
+    url('./login.jpg');
+  
+  
+    background-repeat:no-repeat;
+  width:50%;
+    height:500px;
+  
+  }
+  
+  
+  .imageoverlay{
+  
+  
+  }
+  @media only screen and (max-width: 1024px) {
+    .navitemStyle{
+      margin-right:-0.8vw !important;
+      position:relative;
+      top:3vw !important;
+    }
+    .navitemStyleHome{
+      position:relative;
+      top:4.8vw !important;
+    }
+    #navStyle{
+      position:relative;
+      left:1.8vw !important;
+    }
+  }
+  @media only screen and (max-width: 320px){
+    .pageHeading{
+  
+    }
+  }
+  @media only screen and (max-width: 768px) {
+  .exploreDiv{
+    margin-top:277px !important;
+  }
+    .displayContainer{
+          padding:2vw 7vw 0vw 8vw !important;
+          width:100% !important;
+          overflow-x:auto !important;
+          min-height:600px !important;
+          overflow:auto !important;
+    }
+    .pageHeading{
+      font-size:1.6vw !important;
+    }
+    .copyrighticon{
+    position:relative;
+    top:0.7vw !important;
+    right:0.3vw !important;
+    }
+    .footerlogo{
+      font-size: 1vw !important;
+      font-family:serif !important;
+      font-weight:normal !important;
+    }
+  .footerSpan{
+    font-size:1vw !important;
     font-family:serif !important;
     font-weight:normal !important;
   }
-.footerSpan{
-  font-size:1vw !important;
-  font-family:serif !important;
-  font-weight:normal !important;
-}
-  .firstrowstyle{
+    .firstrowstyle{
+      position:relative;
+      top:2vw !important;
+      margin-bottom:4vw !important;
+    }
+    .repoteesStyle{
+      margin-left:4vw !important;
+      margin-right:2vw;
+      margin-top:1.3vw;
+    }
+    .repoteesCardStyle{
+      height:17vw !important;
+      padding-top:2vw !important;
+      padding-left:3vw !important;
+    }
+    #secondrowstyle{
+      margin-bottom:2.5vw !important;
+    }
+    #thirdrowstyle{
+      margin-bottom:3vw !important;
+    }
+    .piechartStyle{
+      width:8vw !important;
+      margin-top:-1.5vw !important;
+      margin-left:-1vw !important;
+    }
+    .pieChartTextStyle{
+      margin-top:-9vw !important;
+      margin-left:8.5vw !important;
+      font-size:1.1vw !important;
+      color:grey;
+    }
+    .rectangleStyle{
+      padding:-0.1vw;
+    }
+    .timeSheetStyle{
+    padding-left:0.7vw;
+    padding-bottom:1vw;
+    }
+    #navright{
+      position:relative;
+  
+      left:18vw !important;
+    }
+    .upperNav{
     position:relative;
-    top:2vw !important;
-    margin-bottom:4vw !important;
+    bottom:4vw;
+    right:20vw !important;
+    }
+    .upperNavIcon{
+      position:relative;
+      top:7.5vw !important;
+      left:17vw !important;
+  
+    }
+    .settingsIcon{
+      position:relative;
+      top:5.5vw !important;
+      right:-9vw !important;
+    }
+    .notificationIcon{
+      position:relative;
+    top:3.8vw !important;
+      right:-6vw !important;
+    }
+  .displayHome{
+    width:100% !important;
+    margin-top:-2.5vw !important;
+    padding:3vw 7vw 3vw 7vw !important;
   }
-  .repoteesStyle{
-    margin-left:4vw !important;
-    margin-right:2vw;
-    margin-top:1.3vw;
+  .dropDownStyle{
+    position:relative;
+    top:3.89vw !important;
+    width:0.1vw !important;
+    left:-3.8vw !important;
+    font-size:1.4vw !important;
   }
-  .repoteesCardStyle{
-    height:17vw !important;
-    padding-top:2vw !important;
-    padding-left:3vw !important;
+  .dropDownLeaves{
+    position:relative;
+    top:3.89vw !important;
+    width:0.001vw !important;
+    left:-5vw !important;
+    font-size:1.4vw !important;
   }
-  #secondrowstyle{
-    margin-bottom:2.5vw !important;
+  .dropDownClaims{
+    position:relative;
+    top:3.89vw !important;
+    width:0.1vw !important;
+    left:-5vw  !important;
+    font-size:1.4vw !important;
   }
-  #thirdrowstyle{
-    margin-bottom:3vw !important;
+  .dropDownPayroll{
+    position:relative;
+    top:3.89vw !important;
+    width:0.1vw !important;
+    left:-5vw !important;
+    font-size:1.4vw !important;
+  
+  }
+  .dropDownStyleProfile{
+    position:relative;
+    left:-20vw !important;
+    width:1vw !important;
+    font-size:1.4vw !important;
+  }
+  .dropdownContent{
+    position:relative;
+    left:-8vw !important;
+    width:37vw !important;
+    min-height:30vw !important;
+    overflow:hidden;
+    border-radius:10% !important;
+  }
+  .navitemStyleHome{
+    font-size:1.4vw !important;
+    margin-right:-6vw !important;
+  position:relative;
+  top:6vw !important;
+  
+  }
+  .navitemStyle{
+  position:relative;
+  top:3.8vw !important;
+    margin-right:-6.5vw !important;
+    font-size:1.4vw !important;
+    left:3vw !important;
+    right:3vw !important;
+  
+  }
+  #navspace{
+  position:relative;
+  left:3vw !important;
+  right:3vw !important;
+  }
+  #navStyle{
+    font-size:1vw !important;
+    position:relative;
+    left:-7vw !important;
+  }
+  .cardStyle{
+    height:8vw !important;
+  }
+  #cardTextStyle{
+  
+    padding-bottom:0.15vw !important;
+    font-size:1.5vw !important;
+  
+  }
+  .cardHeaderStyle{
+    color:#000000;
+    position:relative;
+    left:0.2vw;
+    top:-1vw !important;
+    font-size:1.2vw !important;
+    font-weight:450;
+    font-family:sans-serif;
+  }
+  .downIcon{
+    position:relative;
+    top:0.55vw !important;
+  }
+  }
+  
+  #navleft{
+    position:relative;
+  
+  }
+  
+  #navright{
+    position:relative;
+  
+    left:50vw;
+  
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  #btnstyle{
+  border:none ;
+  color:black;
+  }
+  #btnstyle:hover{
+    background-color:white !important;
+  }
+  
+  .floatRight{
+  float:right;
+  color:gray;
+  }
+  .floatRight1{
+  float:right;
+  position:relative;
+  bottom:0.5vw;
+  }
+  #link{
+    color:white;
+    text-decoration:none;
+  }
+  .downIcon{
+  position:relative;
+  left:0.2vw;
+  top:0.25vw;
+  }
+  .arrowIconL{
+  position:relative;
+  top:0.18vw;
+  right:0.5vw;
+  }
+  .arrowIconR{
+  position:relative;
+  top:0.18vw;
+  left:0.5vw;
+  }
+  .labelStylepopup{
+    text-align:center;
+    color:black;
+    font-size:0.9vw;
+  }
+  .orange:hover{
+    color:orange;
+  }
+  .floatRight3{
+    float:right;
+    position:relative;
+    bottom:1vw;
+  }
+  #buttonStyle{
+    background-color:orange !important;
+    border:1px solid white !important;
+    color:white !important;
+    min-width:4vw;
+    overflow:hidden;
+  }
+  
+  #savebtn{
+  margin-right:2vw;
+  cursor:pointer;
+  position:relative;
+  top:0.685vw;
+  font-size:1.3vw;
+  
+  }
+  
+  .floatRight2{
+  color:gray;
+  position:relative;
+  top:2vw;
+  left:41.5vw;
+  }
+  .savebtn1{
+  position:relative;
+  top:3vw;
+  right:8vw;
+  }
+  #skip1{
+    position:relative;
+    top:3vw;
+    left:-7vw;
+    color:orange;
+  }
+  .searchfilter{
+  float:right;
+  }
+  .searchfilter button{
+  position:relative;
+  top:-1.5vw;
+  left:6.2vw;
+  }
+  #exampletable{
+    position:relative;
+    top:3vw;
+    text-align: center;
+    min-width:0.5vw ;
+    overflow-x: hidden;
+  }
+  #exampletable tbody > tr:nth-child(2n+1) > td, #exampletable > tbody > tr:nth-child(2n+1) > th {
+     background-color:#F4F6F6 ;
+  }
+  #indicator{
+    color:blue !important;
+  }
+  #item {
+      transition: transform 1.5s ease;
+  }
+  #item1 {
+    transition: transform 5s ease;
+    }
+    #item2{
+      transition: transform 5s ease;
+    }
+  #carousel{
+    background-color:none !important;
+    background-image: none !important;
+    height:10vw;
+  }
+  #navStyle{
+    font-size:1vw;
+    padding-top:4vw;
+    margin-bottom:0.5vw;
+    width:100%;
+    position:relative;
+    left:3.3vw;
+  }
+  #navStyle1{
+    font-size:1vw;
+  padding-top:1vw;
+    margin-bottom:0.5vw;
+    width:100%;
+    position:relative;
+    left:15vw;
+  }
+  .navitemStyle{
+  padding-right:8.25vw;
+  position:relative;
+  bottom:-2.2vw;
+  }
+  .navitemStyle1{
+  padding-right:7vw;
+  position:relative;
+  bottom:-2vw;
+  }
+  .navitemStyleHome{
+  padding-right:8.15vw;
+  position:relative;
+  bottom:-3.5vw;
+  }
+  .navitemStyleHome1{
+  
+  padding-right:8.15vw;
+  position:relative;
+  top:2.2vw;
+  
+  }
+  .settingsIcon1{
+    position:relative;
+    bottom:3.5vw;
+    right:10.7vw;
+  }
+  .notificationIcon1{
+    position:relative;
+    bottom:3.4vw;
+  right:11vw;
+  }
+  .upperNavIcon1{
+    position:relative;
+  top:0.5vw;
+  right:5vw;
+  }
+  
+  .upperNav{
+  position:relative;
+  bottom:4vw;
+  left:-4.5vw;
+  right:5vw;
+  }
+  .upperNavIcon{
+    position:relative;
+    bottom:-0.65vw;
+    left:-0.3vw;
+    right:4.8vw;
+  }
+  .settingsIcon{
+    position:relative;
+    bottom:2.4vw;
+    right:7vw;
+  }
+  .notificationIcon{
+    position:relative;
+    bottom:3.3vw;
+  right:9vw;
+  }
+  .cardimgleft {
+  float:left;
+  margin-left:-1vw;
+  margin-top:-1vw;
+  }
+  .cardTitle{
+    text-align:center;
+    color:black;
+  }
+  .cardStyle{
+   background-color:#FFFFFF;
+   border:none;
+   box-shadow:-0.01px 3px 1px 0.1px grey;
+   height:5vw !important;
+  }
+  .footerlogo{
+    color:white !important;
+    font-size:0.7vw;
+    font-family:sans-serif;
+    position:relative;
+    right:39.5vw;
+  }
+  .footerSpan{
+    color:white;
+    font-size:0.7vw;
+    position:relative;
+    left:76.7vw;
+  }
+  #imgStyle{
+    margin-left:0.5vw;
+    margin-right:0.16vw;
+    margin-top:0.5vw;
+    width:4.3vw;
+  }
+  .test{
+    font-family:"Antic",sans-serif;
+    font-size:2vw;
+    margin:5vw;
+  }
+  .col1{
+    background-color:green;
+    width:10vw;
+    height:10vw;
+  }
+  .col2{
+    background-color:red;
+  }
+  
+  .col3{
+    background-color:blue;
+  }
+  .col4{
+    background-color:pink;
+  }
+  .tableStyle{
+    margin-top:5vw;
+    width:66%;
+    margin-left:15vw;
+  }
+  #hyperLink:hover{
+    color:white !important;
+  }
+  .hyperLinkLogo{
+    color:white !important;
+    text-decoration:none !important;
+  }
+  #hyperLink{
+    text-decoration:none !important;
+    color:white !important;
+  }
+  #dropItem{
+    color:white !important;
+    background-color:#1768C1 !important;
+    position:relative;
+    top:0.7vw;
+    padding-bottom:0.7vw;
+  
+  
+  }
+  #dropItem:hover{
+    color:white !important;
+    background-color:#14519B !important;
+  }
+  .dropdownContent {
+      background-color: #EEEEEE;
+      width: 350px;
+      padding-top:0.5vw;
+      margin-left:-130px;
+  
+      border:none;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  }
+  #dropNotify:hover{
+    background-color:#EEEEEE !important;
+  }
+  #dropDownInputStyle{
+    width:300%;
+    height:2vw;
+  }
+  .dropDownStyle{
+    background-color:#2C3E50;
+    font-size:0.9vw;
+    border:none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius:-20%;
+    position:relative;
+    top:2.769vw;
+    left:-70px;
+    width:235px;
+    min-height:5.5vw;
+    overflow:hidden;
+    text-align:center;
+  }
+  .dropDownLeaves{
+    background-color:#2C3E50;
+    font-size:0.9vw;
+    border:none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius:-20%;
+    position:relative;
+    top:2.769vw;
+    left:-70px;
+    width:250px;
+    min-height:5.5vw;
+    overflow:hidden;
+    text-align:center;
+  }
+  .dropDownPayroll{
+    background-color:#2C3E50;
+    font-size:0.9vw;
+    border:none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius:-20%;
+    position:relative;
+    top:2.769vw;
+    left:-70px;
+    width:220px;
+    min-height:5.5vw;
+    overflow:hidden;
+    text-align:center;
+  }
+  .dropDownClaims{
+    background-color:#2C3E50;
+    font-size:0.9vw;
+    border:none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius:-20%;
+    position:relative;
+    top:2.769vw;
+    left:-70px;
+    width:220px;
+    min-height:5.5vw;
+    overflow:hidden;
+  text-align:center;
+  }
+  .dropDownStyleProfile{
+    background-color:#2C3E50;
+    font-size:0.9vw;
+    border:none;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border-radius:-20%;
+    position:relative;
+    top:2.485vw;
+  margin-right:3.5vw;
+    width:30px;
+    min-height:5vw;
+    overflow:hidden;
+    text-align:center;
+  }
+  #tableinput{
+    width:12vw;
+    box-shadow:none !important;
+       border-color:#D7D7D7 !important;
+    height:2.5vw;
+  }
+  .orange{
+    color:orange;
+  }
+  #contentStyle1{
+  margin-top:3vw;
+  }
+  #contentStyle1 td,#contentStyle th{
+    border:none;
+  }
+  #exampletable td,#exampletable th{
+    border-bottom:0.2px solid lightgray;
+  
+  }
+  
+  #contentStyle1 tbody{
+    border:1px solid #496FA0;
+  }
+  #contentStyle td,#contentStyle th{
+    text-align: center;
+  }
+  .square{
+    position:relative;
+    top:0.6vw;
+    color:orange;
+  }
+  #cardTextStyle{
+    position:relative;
+    top:0.15vw;
+    color:black;
+  
+    text-align: center;
+  }
+  .cardtextstyle1{
+  position:relative;
+  top:0.7vw;
+    color:black;
+    font-size:0.9vw;
+    text-align: center;
+  }
+  .contentHeading{
+    font-size:1.2vw;
+  }
+  .contentText{
+    font-size:1vw;
+  }
+  .cardTitleStyle{
+     font-size:0.8vw;
+     padding-left:0.8vw;
+     color:black !important;
+     text-decoration: none !important;
+  }
+  .cardHeaderStyle{
+    color:#000000;
+  position:relative;
+  left:0.2vw;
+  padding-top:-1.5vw;
+    font-size:1vw;
+    font-weight:450;
+    font-family:sans-serif;
+  }
+  .displayHome{
+    margin-top:-1.47vw;
+    padding:3vw 19vw 6vw 16.9vw;
+    width:100.8%;
+    background-color:#E5E5E5;
+  }
+  
+  .copyrighticon{
+  position:relative;
+  top:0.29vw;
+  }
+  .exploreDiv{
+    width:100%;
+    height:20vw;
+    background-color:#ECEFF1;
+    position:relative;
+  margin-top:18.85vw;
+    margin-bottom:-5vw;
+  }
+  .divStyle{
+    width:10vw;
+    height:10vw;
+    float:right;
+    margin-top:-10vw;
+    border-style:dotted;
+    border-width:0.10vw;
+    border-color:#B8EDEC;
+  }
+  .boxText{
+    font-size:0.8vw;
+    margin-top:-5vw;
+    color:grey;
+    text-align:center;
+  }
+  .checkBoxDiv{
+    float:right;
+  }
+  .imageText{
+    float:right;
+    font-size:0.8vw;
+    margin-top:7vw;
+    margin-right:-11vw;
+  }
+  .imageInput{
+    float:right;
+    margin-top:9vw;
+  }
+  input[type='file'] {
+  color:transparent;
+  border:none;
+  }
+  .bankdiv{
+    position:relative;
+   left:7.9vw;
+  }
+  .formStyle{
+    padding-top:1.5vw;
+  }
+  .displayContainer{
+      background-color:#FFFFFF;
+      padding:2vw 16vw 0vw 17vw;
+      min-height:800px;
+      overflow: hidden;
+      font-style:sans-serif;
+      color:black;
+  }
+  .pageHeading{
+    color:#FF9527;
+    font-size:1vw;
+  
+  }
+  .hrStyle{
+    background-color:#FF9527 !important;
+    margin-top:-0.8vw;
+    font-size:1vw;
+    position:relative;
+    left:-0.2vw;
+    margin-right:0.8vw;
+  }
+  .linkStyle1{
+    color:white !important;
+    text-decoration:none !important;
+  }
+  .iconStyle{
+    padding-bottom:1vw;
+  }
+  .inputStyle{
+  height:2vw;
+  width:50%;
+  font-size: 0.7vw;
+  }
+  #inputstyle1{
+    width:50%;
+    height:2vw;
+    font-size: 0.7vw;
+  }
+  .inputStyle1{
+    height:2vw;
+    width:25%;
+    font-size: 0.7vw;
+  }
+  .imageInput{
+    margin-top:1vw;
+    margin-right:1vw;
+    width:7.7vw;
+  }
+  .inputStyleDropDown{
+    height:2vw;
+  }
+  .labelStyle{
+    font-size:0.8vw;
+    margin-bottom:-1vw;
+  }
+  .labelStyle1{
+    font-size:1vw;
+    margin-bottom:-1vw;
+  }
+  
+  .arrow{
+    color:gray;
+    position:relative;
+    top:0.1vw;
+    left:-0.1vw;
+    font-size:1.1vw;
+  }
+  .pageHeader{
+    color:gray;
+    margin-top:3vw;
+    font-size:0.8vw;
+  
   }
   .piechartStyle{
-    width:8vw !important;
-    margin-top:-1.5vw !important;
-    margin-left:-1vw !important;
+       margin-left:0.5vw;
+       margin-top:0.6vw;
+       width:6.8vw;
   }
   .pieChartTextStyle{
-    margin-top:-9vw !important;
-    margin-left:8.5vw !important;
-    font-size:1.1vw !important;
+    margin-top:-7.3vw;
+    margin-left:8.5vw;
+    font-size:0.7vw;
     color:grey;
   }
   .rectangleStyle{
@@ -198,840 +975,137 @@ width:50%;
   padding-left:0.7vw;
   padding-bottom:1vw;
   }
-  #navright{
-    position:relative;
-
-    left:18vw !important;
+  #hello{
+    text-decoration:none !important;
+    background-color:#039BE5;
+    color:white;
   }
-  .upperNav{
-  position:relative;
-  bottom:4vw;
-  right:20vw !important;
-  }
-  .upperNavIcon{
-    position:relative;
-    top:7.5vw !important;
-    left:17vw !important;
-
-  }
-  .settingsIcon{
-    position:relative;
-    top:5.5vw !important;
-    right:-9vw !important;
-  }
-  .notificationIcon{
-    position:relative;
-  top:3.8vw !important;
-    right:-6vw !important;
-  }
-.displayHome{
-  width:100% !important;
-  margin-top:-2.5vw !important;
-  padding:3vw 7vw 3vw 7vw !important;
-}
-.dropDownStyle{
-  position:relative;
-  top:3.89vw !important;
-  width:0.1vw !important;
-  left:-3.8vw !important;
-  font-size:1.4vw !important;
-}
-.dropDownLeaves{
-  position:relative;
-  top:3.89vw !important;
-  width:0.001vw !important;
-  left:-5vw !important;
-  font-size:1.4vw !important;
-}
-.dropDownClaims{
-  position:relative;
-  top:3.89vw !important;
-  width:0.1vw !important;
-  left:-5vw  !important;
-  font-size:1.4vw !important;
-}
-.dropDownPayroll{
-  position:relative;
-  top:3.89vw !important;
-  width:0.1vw !important;
-  left:-5vw !important;
-  font-size:1.4vw !important;
-
-}
-.dropDownStyleProfile{
-  position:relative;
-  left:-20vw !important;
-  width:1vw !important;
-  font-size:1.4vw !important;
-}
-.dropdownContent{
-  position:relative;
-  left:-8vw !important;
-  width:37vw !important;
-  min-height:30vw !important;
-  overflow:hidden;
-  border-radius:10% !important;
-}
-.navitemStyleHome{
-  font-size:1.4vw !important;
-  margin-right:-6vw !important;
-position:relative;
-top:6vw !important;
-
-}
-.navitemStyle{
-position:relative;
-top:3.8vw !important;
-  margin-right:-6.5vw !important;
-  font-size:1.4vw !important;
-  left:3vw !important;
-  right:3vw !important;
-
-}
-#navspace{
-position:relative;
-left:3vw !important;
-right:3vw !important;
-}
-#navStyle{
-  font-size:1vw !important;
-  position:relative;
-  left:-7vw !important;
-}
-.cardStyle{
-  height:8vw !important;
- background-color:#FFFFFF;
- border:none;
- box-shadow:-0.01px 3px 1px 0.1px grey;
-
-}
-.cardTextStyle{
-  position:relative;
-  padding-bottom:0.15vw !important;
-  color:black;
-  font-size:1.5vw !important;
-  text-align: center;
-}
-.cardHeaderStyle{
-  color:#000000;
-  position:relative;
-  left:0.2vw;
-  top:-1vw !important;
-  font-size:1.2vw !important;
-  font-weight:450;
-  font-family:sans-serif;
-}
-.downIcon{
-  position:relative;
-  top:0.55vw !important;
-}
-}
-
-#navleft{
-  position:relative;
-
-}
-
-#navright{
-  position:relative;
-
-  left:50vw;
-
-}
-
-
-
-
-
-
-
-
-#btnstyle{
-border:none ;
-color:black;
-}
-#btnstyle:hover{
-  background-color:white !important;
-}
-
-.floatRight{
-float:right;
-color:gray;
-}
-.floatRight1{
-float:right;
-}
-#link{
-  color:white;
-  text-decoration:none;
-}
-.downIcon{
-position:relative;
-left:0.2vw;
-top:0.25vw;
-}
-.arrowIconL{
-position:relative;
-top:0.18vw;
-right:0.5vw;
-}
-.arrowIconR{
-position:relative;
-top:0.18vw;
-left:0.5vw;
-}
-.labelStylepopup{
-  text-align:center;
-  color:black;
-  font-size:0.9vw;
-}
-.orange:hover{
-  color:orange;
-}
-.floatRight3{
-  float:right;
-  position:relative;
-  bottom:1vw;
-}
-#buttonStyle{
-  background-color:orange !important;
-  border:1px solid white !important;
-  color:white !important;
-  min-width:4vw;
-  overflow:hidden;
-}
-
-#savebtn{
-margin-right:2vw;
-cursor:pointer;
-position:relative;
-top:0.685vw;
-font-size:1.3vw;
-
-}
-
-.floatRight2{
-color:gray;
-position:relative;
-top:2vw;
-left:41.5vw;
-}
-#savebtn1{
-position:relative;
-top:2vw;
-right:8vw;
-}
-#skip1{
-  position:relative;
-  top:2vw;
-  left:-7vw;
-  color:orange;
-}
-.searchfilter{
-float:right;
-}
-.searchfilter button{
-position:relative;
-top:-1.5vw;
-left:6.2vw;
-}
-
-#exampletable{
-  position:relative;
-  top:3vw;
-  text-align: center;
-  min-width:0.5vw ;
-  overflow-x: hidden;
-}
-
-#exampletable tbody > tr:nth-child(2n+1) > td, #exampletable > tbody > tr:nth-child(2n+1) > th {
-   background-color:#F4F6F6 ;
-}
-
-#indicator{
-  color:blue !important;
-}
-#item {
-    transition: transform 1.5s ease;
-}
-#item1 {
-  transition: transform 5s ease;
-  }
-  #item2{
-    transition: transform 5s ease;
-  }
-#carousel{
-  background-color:none !important;
-  background-image: none !important;
-  height:10vw;
-}
-#navStyle{
-  font-size:1vw;
-  padding-top:4vw;
-  margin-bottom:0.5vw;
-  width:100%;
-  position:relative;
-  left:3.3vw;
-}
-#navStyle1{
-  font-size:1vw;
-padding-top:1vw;
-  margin-bottom:0.5vw;
-  width:100%;
-  position:relative;
-  left:15vw;
-}
-.navitemStyle{
-padding-right:8.25vw;
-position:relative;
-bottom:-2.2vw;
-}
-.navitemStyle1{
-padding-right:7vw;
-position:relative;
-bottom:-2vw;
-}
-.navitemStyleHome{
-padding-right:8.15vw;
-position:relative;
-bottom:-3.5vw;
-}
-.navitemStyleHome1{
-
-padding-right:8.15vw;
-position:relative;
-top:2.2vw;
-
-}
-.settingsIcon1{
-  position:relative;
-  bottom:3.5vw;
-  right:10.7vw;
-}
-.notificationIcon1{
-  position:relative;
-  bottom:3.4vw;
-right:11vw;
-}
-.upperNavIcon1{
-  position:relative;
-top:0.5vw;
-right:5vw;
-}
-
-.upperNav{
-position:relative;
-bottom:4vw;
-left:-4.5vw;
-right:5vw;
-}
-.upperNavIcon{
-  position:relative;
-  bottom:-0.65vw;
-  left:-0.3vw;
-  right:4.8vw;
-}
-.settingsIcon{
-  position:relative;
-  bottom:2.4vw;
-  right:7vw;
-}
-.notificationIcon{
-  position:relative;
-  bottom:3.3vw;
-right:9vw;
-}
-.cardimgleft {
-float:left;
-margin-left:-1vw;
-margin-top:-1vw;
-}
-.cardTitle{
-  text-align:center;
-  color:black;
-}
-.cardStyle{
-  height:5vw;
- background-color:#FFFFFF;
- border:none;
- box-shadow:-0.01px 3px 1px 0.1px grey;
-}
-.footerlogo{
-  color:white !important;
-  font-size:0.7vw;
-  font-family:sans-serif;
-  position:relative;
-  right:39.5vw;
-}
-.footerSpan{
-  color:white;
-  font-size:0.7vw;
-  position:relative;
-  left:76.7vw;
-}
-#imgStyle{
-  margin-left:0.5vw;
-  margin-right:0.16vw;
-  margin-top:0.5vw;
-  width:4.3vw;
-}
-.test{
-  font-family:"Antic",sans-serif;
-  font-size:2vw;
-  margin:5vw;
-}
-.col1{
-  background-color:green;
-  width:10vw;
-  height:10vw;
-}
-.col2{
-  background-color:red;
-}
-
-.col3{
-  background-color:blue;
-}
-.col4{
-  background-color:pink;
-}
-.tableStyle{
-  margin-top:5vw;
-  width:66%;
-  margin-left:15vw;
-}
-#hyperLink:hover{
-  color:white !important;
-}
-.hyperLinkLogo{
-  color:white !important;
-  text-decoration:none !important;
-}
-#hyperLink{
-  text-decoration:none !important;
-  color:white !important;
-}
-#dropItem{
-  color:white !important;
-  background-color:#1768C1 !important;
-  position:relative;
-  top:0.7vw;
-  padding-bottom:0.7vw;
-
-
-}
-#dropItem:hover{
-  color:white !important;
-  background-color:#14519B !important;
-}
-.dropdownContent {
-    background-color: #EEEEEE;
-    width: 350px;
+  
+  .exploreCard1{
+    width:45%;
+    height:6vw;
+    background-color:#039BE5;
+    text-align: center;
+    text-decoration:none !important;
+    color:white;
     padding-top:0.5vw;
-    margin-left:-130px;
-
+    margin-top:-1.5vw;
+    margin-left:30vw;
+    margin-bottom:10vw;
+  }
+  
+  .exploreCard2{
+    width:60%;
+    height:6vw;
+    background-color:white;
+    text-align:center;
+    padding-top:0.3vw;
+    color:#039BE5 !important;
+    margin-top:-1.5vw;
+    margin-left:15vw;
+    margin-bottom:10vw;
+  }
+  .calendarStyle{
+  margin-left:25vw;
+  margin-top:-2.5vw;
+  
+  
+  }
+  .repoteesStyle{
+    margin-left:2vw;
+    margin-right:2vw;
+    margin-top:1.3vw;
+  }
+  .repoteesCardStyle1{
+    width:8vw;
+    height:7vw;
+    padding: 0vw;
+    background-color:#EBEBEB;
     border:none;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-#dropNotify:hover{
-  background-color:#EEEEEE !important;
-}
-#dropDownInputStyle{
-  width:300%;
-  height:2vw;
-}
-.dropDownStyle{
-  background-color:#2C3E50;
-  font-size:0.9vw;
-  border:none;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border-radius:-20%;
-  position:relative;
-  top:2.769vw;
-  left:-70px;
-  width:235px;
-  min-height:5.5vw;
-  overflow:hidden;
-  text-align:center;
-}
-.dropDownLeaves{
-  background-color:#2C3E50;
-  font-size:0.9vw;
-  border:none;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border-radius:-20%;
-  position:relative;
-  top:2.769vw;
-  left:-70px;
-  width:250px;
-  min-height:5.5vw;
-  overflow:hidden;
-  text-align:center;
-}
-.dropDownPayroll{
-  background-color:#2C3E50;
-  font-size:0.9vw;
-  border:none;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border-radius:-20%;
-  position:relative;
-  top:2.769vw;
-  left:-70px;
-  width:220px;
-  min-height:5.5vw;
-  overflow:hidden;
-  text-align:center;
-}
-.dropDownClaims{
-  background-color:#2C3E50;
-  font-size:0.9vw;
-  border:none;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border-radius:-20%;
-  position:relative;
-  top:2.769vw;
-  left:-70px;
-  width:220px;
-  min-height:5.5vw;
-  overflow:hidden;
-text-align:center;
-}
-.dropDownStyleProfile{
-  background-color:#2C3E50;
-  font-size:0.9vw;
-  border:none;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  border-radius:-20%;
-  position:relative;
-  top:2.485vw;
-margin-right:3.5vw;
-  width:30px;
-  min-height:5vw;
-  overflow:hidden;
-  text-align:center;
-}
-#tableinput{
-  width:12vw;
-  box-shadow:none !important;
-     border-color:#D7D7D7 !important;
-  height:2.5vw;
-}
-.orange{
-  color:orange;
-}
-#contentStyle1{
-margin-top:3vw;
-}
-#contentStyle1 td,#contentStyle th{
-  border:none;
-}
-#exampletable td,#exampletable th{
-  border-bottom:0.2px solid lightgray;
-
-}
-
-#contentStyle1 tbody{
-  border:1px solid #496FA0;
-}
-#contentStyle td,#contentStyle th{
-  text-align: center;
-}
-.square{
-  position:relative;
-  top:0.6vw;
-  color:orange;
-}
-.cardTextStyle{
-  position:relative;
-  top:0.15vw;
-  color:black;
-  font-size:1vw;
-  text-align: center;
-}
-.cardtextstyle1{
-position:relative;
-top:0.7vw;
-  color:black;
-  font-size:0.9vw;
-  text-align: center;
-}
-.contentHeading{
-  font-size:1.2vw;
-}
-.contentText{
-  font-size:1vw;
-}
-.cardTitleStyle{
-   font-size:0.8vw;
-   padding-left:0.8vw;
-   color:black !important;
-   text-decoration: none !important;
-}
-.cardHeaderStyle{
-  color:#000000;
-position:relative;
-left:0.2vw;
-padding-top:-1.5vw;
-  font-size:1vw;
-  font-weight:450;
-  font-family:sans-serif;
-}
-.displayHome{
-  margin-top:-1.47vw;
-  padding:3vw 19vw 6vw 16.9vw;
-  width:100.8%;
-  background-color:#E5E5E5;
-}
-
-.copyrighticon{
-position:relative;
-top:0.29vw;
-}
-.exploreDiv{
-  width:100%;
-  height:20vw;
-  background-color:#ECEFF1;
-  position:relative;
-margin-top:18.85vw;
-  margin-bottom:-5vw;
-}
-.divStyle{
-  width:10vw;
-  height:10vw;
-  float:right;
-  margin-top:-10vw;
-  border-style:dotted;
-  border-width:0.10vw;
-  border-color:#B8EDEC;
-}
-.boxText{
-  font-size:0.8vw;
-  margin-top:-5vw;
-  color:grey;
-  text-align:center;
-}
-.checkBoxDiv{
-  float:right;
-}
-.imageText{
-  float:right;
-  font-size:0.8vw;
-  margin-top:7vw;
-  margin-right:-11vw;
-}
-.imageInput{
-  float:right;
-  margin-top:9vw;
-}
-input[type='file'] {
-color:transparent;
-border:none;
-}
-.bankdiv{
-  position:relative;
- left:7.9vw;
-}
-.formStyle{
-  padding-top:1.5vw;
-}
-.displayContainer{
-    background-color:#FFFFFF;
-    padding:2vw 16vw 0vw 17vw;
-    min-height:800px;
-    overflow: hidden;
-    font-style:sans-serif;
-    color:black;
-}
-.pageHeading{
-  color:#FF9527;
-  font-size:1vw;
-
-}
-.hrStyle{
-  background-color:#FF9527 !important;
-  margin-top:-0.8vw;
-  font-size:1vw;
-  position:relative;
-  left:-0.2vw;
-  margin-right:0.8vw;
-}
-.linkStyle1{
-  color:white !important;
-  text-decoration:none !important;
-}
-.iconStyle{
-  padding-bottom:1vw;
-}
-.inputStyle{
-height:2vw;
-width:50%;
-font-size: 0.7vw;
-}
-#inputstyle1{
-  width:50%;
-  height:2vw;
-  font-size: 0.7vw;
-}
-.inputStyle1{
-  height:2vw;
-  width:25%;
-  font-size: 0.7vw;
-}
-.imageInput{
-  margin-top:1vw;
-  margin-right:1vw;
-  width:7.7vw;
-}
-.inputStyleDropDown{
-  height:2vw;
-}
-.labelStyle{
-  font-size:0.8vw;
-  margin-bottom:-1vw;
-}
-.labelStyle1{
-  font-size:1vw;
-  margin-bottom:-1vw;
-}
-
-.arrow{
-  color:gray;
-  position:relative;
-  top:0.1vw;
-  left:-0.1vw;
-  font-size:1.1vw;
-}
-.pageHeader{
-  color:gray;
-  margin-top:3vw;
-  font-size:0.8vw;
-
-}
-.piechartStyle{
-     margin-left:0.5vw;
-     margin-top:0.6vw;
-     width:6.8vw;
-}
-.pieChartTextStyle{
-  margin-top:-7.3vw;
-  margin-left:8.5vw;
-  font-size:0.7vw;
-  color:grey;
-}
-.rectangleStyle{
-  padding:-0.1vw;
-}
-.timeSheetStyle{
-padding-left:0.7vw;
-padding-bottom:1vw;
-}
-#hello{
-  text-decoration:none !important;
-  background-color:#039BE5;
-  color:white;
-}
-
-.exploreCard1{
-  width:45%;
-  height:6vw;
-  background-color:#039BE5;
-  text-align: center;
-  text-decoration:none !important;
-  color:white;
-  padding-top:0.5vw;
-  margin-top:-1.5vw;
-  margin-left:30vw;
-  margin-bottom:10vw;
-}
-
-.exploreCard2{
-  width:60%;
-  height:6vw;
-  background-color:white;
-  text-align:center;
-  padding-top:0.3vw;
-  color:#039BE5 !important;
-  margin-top:-1.5vw;
-  margin-left:15vw;
-  margin-bottom:10vw;
-}
-.calendarStyle{
-margin-left:25vw;
-margin-top:-2.5vw;
-
-
-}
-.repoteesStyle{
-  margin-left:2vw;
-  margin-right:2vw;
-  margin-top:1.3vw;
-}
-.repoteesCardStyle1{
-  width:8vw;
-  height:7vw;
-  padding: 0vw;
-  background-color:#EBEBEB;
-  border:none;
- box-shadow:-0.01px 3px 3px 0.1px 	#CCD1D1;
-}
-.repoteesCardStyle{
-  margin-bottom:2vw;
-  padding-top:1vw;
-  padding-left:1vw;
-  border:none;
-  height:14vw;
-  width:101.5%;
- box-shadow:-0.01px 3px 8px 0.1px 	gray;
-}
-.rowStyle{
-  margin-top:1vw;
-  border:none;
-}
-.repoteesRowStyle{
-
-  color:grey;
-  font-size:0.7vw;
-  margin-top:1vw;
-  margin-left:2.9vw;
-}
-.labelStyleRadio{
-  font-size:0.85vw;
-}
-.radioStyle1{
-  margin-top:-0.65vw;
-}
-.radioStyle{
-  margin-left:1vw;
-  font-size:0.8vw;
-  margin-right:0.3vw;
-}
-
-.tableDiv{
- margin-top:3vw;
- margin-bottom:1vw;
-  border:1px solid #D7D7D7;
-}
-.textAreaStyle{
-  width:50%;
-}
-
-.verticalLine{
-  width:1%;
-  height:5vw;
-}
-#labelstyle{
-  font-size:0.9vw;
-}
-#inputstyle{
-  width:100%;
-  height:2vw;
-  font-size:0.9vw;
-}
-#buttonstyle{
-  border-color:#FF7F27 !important;
-  margin-top:1vw;
-  color:grey;
-  width:12%;
-  font-size:0.9vw;
-  height:2vw;
-}
+   box-shadow:-0.01px 3px 3px 0.1px 	#CCD1D1;
+  }
+  .repoteesCardStyle{
+    margin-bottom:2vw;
+    padding-top:1vw;
+    padding-left:1vw;
+    border:none;
+    height:18vw;
+    width:101.5%;
+   box-shadow:-0.01px 3px 8px 0.1px 	gray;
+  }
+  .rowStyle{
+    margin-top:1vw;
+    border:none;
+  }
+  .repoteesRowStyle{
+  
+    color:grey;
+    font-size:0.7vw;
+    margin-top:1vw;
+    margin-left:2.9vw;
+  }
+  .labelStyleRadio{
+    font-size:0.85vw;
+  }
+  .radioStyle1{
+    margin-top:-0.65vw;
+  }
+  .radioStyle{
+    margin-left:1vw;
+    font-size:0.8vw;
+    margin-right:0.3vw;
+  }
+  
+  .tableDiv{
+   margin-top:3vw;
+   margin-bottom:1vw;
+    border:1px solid #D7D7D7;
+  }
+  .textAreaStyle{
+    width:50%;
+  }
+  
+  .verticalLine{
+    width:1%;
+    height:5vw;
+  }
+  #labelstyle{
+    font-size:0.9vw;
+  }
+  #inputstyle{
+    width:100%;
+    height:2vw;
+    font-size:0.9vw;
+  }
+  #buttonstyle{
+    border-color:#FF7F27 !important;
+    margin-top:1vw;
+    color:grey;
+    width:12%;
+    font-size:0.9vw;
+    height:2vw;
+  }
+  .radiostyle{
+    position:relative;
+    right:0.3vw;
+    top:0.2vw;
+    
+    }
+    .radioinput{
+     color:black;
+     font-size: 0.9vw;
+     font-weight:normal;
+    font-style:arial;
+    position:relative;
+    bottom:0.3vw;
+    right:2vw;
+    }
+    .genderlabel{
+     font-size:1vw;
+     font-style:arial;
+     position:relative;
+     left:0.5vw;
+     top:1.3vw;
+     font-weight: lighter;
+    }
+    
