@@ -1,15 +1,13 @@
+#savebtnstyle{
+  background-color:grey;
+  color:black;
+}
+
 .errormsg{
   color:red;
   font-size:0.8vw;
 }
-.genderlabel{
-  font-size:1vw;
-  font-style:arial;
-  position:relative;
-  left:0.5vw;
-  top:2vw;
-  font-weight: lighter;
-}
+
 #genderstyle{
   position:relative;
   left:5vw;
@@ -34,7 +32,6 @@ border:none;
 border:0.5px solid gray;
 visibility:hidden;
 border:1px solid red;
-
 }
 input[type="file"]::after{
   visibility:'visible';
@@ -353,43 +350,10 @@ background-color:red;
   width:98%;
   height:2.4vw;
   font-size:0.9vw;
-     outline: none;
+  outline: none;
   box-shadow:none !important;
    border-color:#D7D7D7 ;
 }
-DatePicker:valid{
-  border: 1px solid lime;
-}
-DatePicker:invalid{
-     border: 1px solid red;
-}
-.inputstyle:valid {
-   border: 1px solid lime;
-}
-.inputstyle:invalid {
-   border: 1px solid red;
-}
-
-.inputstyle1:invalid {
-   border: 1px solid red;
-}
-.inputstyle1:valid {
-   border: 1px solid lime;
-}
-.inputstyle2:invalid {
-   border: 1px solid red;
-}
-.inputstyle2:valid {
-   border: 1px solid lime;
-}
-.inputstyletextarea:invalid {
-   border: 1px solid red;
-}
-.inputstyletextarea:valid {
-   border: 1px solid lime;
-}
-
-
 .inputstyletextarea{
   width:82%;
   height:3vw;
@@ -397,7 +361,6 @@ DatePicker:invalid{
   box-shadow:none !important;
   border-color:#D7D7D7;
 }
-
 #buttonstyle{
   border-color:#FF7F27 !important;
   margin-top:1vw;
@@ -406,7 +369,6 @@ DatePicker:invalid{
   font-size:0.9vw;
   height:2vw;
 }
-
 input[type=search]:focus {
 	width: 130px;
 	background-color: #fff;

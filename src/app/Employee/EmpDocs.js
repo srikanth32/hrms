@@ -1,7 +1,6 @@
 import React from "react";
 import { Button, Form, FormGroup, Label, Input, FormText,Row } from 'reactstrap';
-import {DatePicker,TextField,Slider} from 'material-ui/';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 import Icon from 'react-icons-kit';
 import { arrowRight2,arrowLeft2, plus  } from 'react-icons-kit/icomoon';
 import {Link} from "react-router-dom";
@@ -10,8 +9,41 @@ import {displayContainer,arrowIconR,arrowIconL,skip1,savebtn1,floatRight2,hrStyl
 import {inputstylefile,formStyle,enableBtn,disableBtn} from "./LayoutSettings.css";
   import {Header} from "../Header";
   import {Footer} from "../Footer";
+  import styles from "./LayoutEmployee.css";
 
 export class EmpDocs extends React.Component{
+  function (d, axios) {
+    "use strict";
+    var inputFile = d.querySelector("#inputFile");
+    var divNotification = d.querySelector("#alert");
+
+    inputFile.addEventListener("change", addFile);
+
+    function addFile(e) {
+        var file = e.target.files[0]
+        if(!file){
+            return
+        }
+        upload(file);
+    }
+
+    function upload(file) {
+        var formData = new FormData()
+        formData.append("file", file)
+        post("/upload", formData)
+            .then(onResponse)
+            .catch(onResponse);        
+    }
+
+    function onResponse(response) {
+        var className = (response.status !== 400) ? "success" : "error";
+        divNotification.innerHTML = response.data;
+        divNotification.classList.add(className);
+        setTimeout(function() {
+            divNotification.classList.remove(className);
+        }, 3000);
+    }
+}
   render() {
     return(
 <div>
@@ -19,8 +51,7 @@ export class EmpDocs extends React.Component{
        <div className={displayContainer}>
 <p className={pageHeading}>Employee Documents</p>
 <hr className={hrStyle}/>
-<Form className={formStyle}>
-
+<Form  action="/upload" method="post" enctype="multipart/form-data" className={formStyle}>
 <div className={floatRight} style={{fontSize:'0.9vw'}} id={slidertext}>
 <p style={{marginTop:'1.5vw'}}>
 <Link to="/PersonalDetails" className={hyperLinkEmployee}>Personal Details</Link></p>
@@ -30,46 +61,22 @@ export class EmpDocs extends React.Component{
 <p><Link to="/JobHistory" className={hyperLinkEmployee}>Job History</Link></p>
 <p><Link to="/EmpDocs" className={orange}>Employee Documents</Link></p>
 </div>
-
       <Row>
         <div class="col-md-3 mb-3">
-          <label className={labelStyle1}>Document Name</label>
-          <input type="text" class="form-control"  id={inputstyle} placeholder=""/>
+        <p className={styles.file}>
+        <input type="file" className={styles.file} id="inputfile" />
+      </p>
         </div>
-        <div class="col-md-3 mb-3">
-        <label className={labelStyle1}></label>
-        <input type="file" class="form-control" id={inputstyle} placeholder="" />
-
-
-        </div>
-
         </Row>
-
-
 </Form>
-
-<div className={bankdiv} style={{marginTop:'10vw'}}>
-
 <Link to="/ViewEmployee">
-<button type="button" class="btn btn-outline-warning"  id={savebtn1}>Submit</button>
+<button type="button" class="btn btn-outline-warning"  id={savebtn1} style={{marginLeft:'1vw'}}>Submit</button>
 </Link>
-<Link to="/ViewEmployee" id={skip1}>Skip </Link>
-
-             <span className={floatRight2}>
 
 
-             <Link to="/JobHistory" className={hyperLinkEmployee} >
-             <button type="button" class="btn btn-light">
-             <Icon icon={arrowLeft2} className={arrowIconL} size={14}/>Prev</button>
-               </Link>
-
-
-
-                </span>
-</div>
        </div>
        <Footer/>
        </div>
      );
    }
-}
+ }

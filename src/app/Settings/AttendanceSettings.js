@@ -1,7 +1,6 @@
 import React  from "react";
 import { Button, Form, FormGroup, Label, Input, FormText,Row,Col } from 'reactstrap';
-import {DatePicker,TextField,Slider,TimePicker} from 'material-ui';
-import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+
 import {Link} from "react-router-dom";
 import Icon from 'react-icons-kit';
 import {arrowRight2,arrowLeft2 } from 'react-icons-kit/icomoon';
@@ -11,28 +10,105 @@ import {formStyle,hyperLink,floatRight,
   radiodiv,timeStyle} from "./LayoutSettings.css";
 import {Header} from "../Header";
 import {Footer} from "../Footer";
+import $ from 'jquery';
+
+var URL = 'http://localhost:3033/';
 export class AttendanceSettings extends React.Component {
+  addAttendance(){
+    var obj = new Object();
+
+    obj["shiftname"] = $("#shiftname").val();
+    obj["start"] = $("#start").val();
+    obj["end"] = $("#end").val();
+    obj["desc"] = $("#desc").val();
+    obj["late"] = $("#late").val();
+    obj["overtime"] = $("#overtime option:selected").text();
+    obj["status"] =$('input:radio[name=status]:checked').val();
+    //obj["monthlyctc"] = $("#monthlyctc").val();
+    $.ajax({
+      url: URL + '/AttendanceSettings',
+      type: 'GET',
+      data: { json: JSON.stringify(obj) },
+      cache: false,
+      success: function (response) {
+          response = JSON.parse(response);
+          console.log(response)
+          if (response.Status === 'true') {
+              //alert(response.Message);
+          } else {
+              alert(response.Message);
+          }
+      },
+      error: function () {
+          alert('Unable to update job details !!!');
+      },
+      complete: function () {
+          //self.container.dataLoader('hide');
+      }
+  });
+}
   constructor(props) {
-   super(props);
-   this.state = {value24: null, valueStart: null,valueEnd: null,valueLateMark: null};
+   super();
+   this.state = {
+     shiftname:'',
+     starttime:'',
+     endtime:'',
+     description:'',
+     latetime:'',
+     overtime:'',
+     error1:false,
+     showError1:false
+   };
  }
 
- handleChangeTimePicker24 = (event, date) => {
-   this.setState({value24: date});
- };
+ handleShiftChange = (evt) => {
+   this.setState({
+     shiftname: evt.target.value,
+     showError1:true
+   });
+ }
+ handleStartChange = (evt) => {
+   this.setState({
+     starttime : evt.target.value
 
- handleChangeTimePickerStart = (event, date) => {
-   this.setState({valueStart: date});
- };
- handleChangeTimePickerEnd = (event, date) => {
-   this.setState({valueEnd: date});
- };
- handleChangeTimePickerLateMark = (event, date) => {
-   this.setState({valueLateMark: date});
- };
+    });
+ }
+ handleEndChange = (evt) => {
+   this.setState({
+     endtime : evt.target.value,
+     error1:true
+    });
+ }
+ handleDescriptionChange = (evt) => {
+   this.setState({
+     description: evt.target.value
+   });
+ }
+ handleLateChange = (evt) => {
+   this.setState({
+     latetime: evt.target.value,
+     showError1:true
+   });
+ }
+ handleOverChange = (evt) => {
+   this.setState({
+     overtime : evt.target.value
+
+    });
+ }
   render() {
 
+
+    const {shiftname,starttime,endtime,description,latetime,overtime} = this.state;
+    var re1 = new RegExp("^([a-zA-Z]{2,25}(?: [a-zA-Z]+){0,2})$");
+
+    const isEnabled =
+    re1.test(shiftname)&&
+    description.length>0;
+
     return(
+
+
       <div>
       <Header/>
              <div className={displayContainer}>
@@ -45,65 +121,41 @@ export class AttendanceSettings extends React.Component {
             <div class="form-row">
             <div class="col-md-10 mb-3">
                 <label className={labelStyle1}>Shift Name</label>
-                <input id={inputstyle} type="text" name="" class="form-control"  placeholder="" />
+        <Input type="text" className={inputstyle} placeholder="" value={this.state.shiftname} id="shiftname"
+        onChange={this.handleShiftChange} pattern="[a-zA-Z]{5,25}" title="name must be letters only" required />
                 </div>
                 </div>
-
-
               <div class="form-row">
               <div class="col-md-5 mb-3">
               <label className={labelStyle1}>Work Start Time</label>
-              <MuiThemeProvider>
-              <TimePicker
-           format="ampm"
-
-           value={this.state.valueStart}
-           onChange={this.handleChangeTimePickerStart}
-           underlineStyle={{display: 'none'}}
-           className={timeStyle}
-           style={{border:'1px solid #D0D3D4'}}
-         />
-         </MuiThemeProvider>
+              <Input className={inputstyle} type="time" name="text" id="start"
+          value={this.state.starttime} onChange={this.handleStartChange} required  />
              </div>
              <div class="col-md-5 mb-3">
              <label className={labelStyle1}>Work End Time</label>
-             <MuiThemeProvider>
-             <TimePicker
-          format="ampm"
-
-          value={this.state.valueEnd}
-          onChange={this.handleChangeTimePickerEnd}
-          underlineStyle={{display: 'none'}}
-          className={timeStyle}
-          style={{border:'1px solid #D0D3D4'}}
-        />
-        </MuiThemeProvider>
+             <Input className={inputstyle} type="time" name="text" id="end"
+           value={this.state.endtime} onChange={this.handleEndChange} required  />
             </div>
             </div>
               <FormGroup>
                    <Label className={labelStyle1}>Description</Label>
-                   <Input id={inputstyletextarea} type="textarea" name="text"  />
+                   <Input className={inputstyletextarea} type="textarea" name="text" pattern="[a-zA-Z]{5,25}" id="desc"
+                   value={this.state.description} onChange={this.handleDescriptionChange} required  />
                  </FormGroup>
                  <div class="form-row">
                  <div class="col-md-5 mb-3">
                  <label className={labelStyle1}>Late Mark After Time</label>
-                 <MuiThemeProvider>
-                 <TimePicker
-              format="ampm"
-              value={this.state.valueEnd}
-              onChange={this.handleChangeTimePickerLateMark}
-              underlineStyle={{display: 'none'}}
-              className={timeStyle}
-              style={{border:'1px solid #D0D3D4'}}
-            />
-            </MuiThemeProvider>
+                 <Input className={inputstyle} type="time" name="text" id="late"
+             value={this.state.latetime} onChange={this.handleLateChange} required  />
                 </div>
                 <div class="col-md-5 mb-3">
                  <label className={labelStyle1}>Over Time</label>
-                 <select  class="form-control" id={inputstyle}>
-                 <option>Enable</option>
-                  <option>Disable</option>
-                </select>
+                 <Input type="select" name="select" className={inputstyle} pattern="[a-zA-Z]{5,25}" id="overtime"
+                  value={this.state.overtime} onChange={this.handleOverChange}   required>
+                 <option></option>
+                      <option>Enable</option>
+                      <option>Disable</option>
+                    </Input>
                </div>
                </div>
                <Row className={overtimePay}>
@@ -112,20 +164,23 @@ export class AttendanceSettings extends React.Component {
 
             <div style={{marginLeft:'4vw'}}>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios1" value="option1" checked
+              <input class="form-check-input" type="radio" name="status" id="gridRadios1" value="Active" checked
               />
               <label class="form-check-label" for="gridRadios1" style={{fontSize:'0.8vw',marginLeft:'1vw'}} id={radiocheck}>
                 Active
               </label>
             </div>
             <div class="form-check">
-              <input class="form-check-input" type="radio" name="gridRadios" id="gridRadios2" value="option2"/>
+              <input class="form-check-input" type="radio" name="status" id="gridRadios2" value="InActive"/>
               <label class="form-check-label" for="gridRadios2" style={{fontSize:'0.8vw',marginLeft:'1vw'}} id={radiocheck}>
               InActive
               </label>
             </div>
             </div>
             </Row>
+            {isEnabled ? <Link to="/AddLeave"> <button  class="btn btn-primary" onClick={(e) => this.addAttendance(e)}>SAVE</button> </Link> :
+            <button class="btn btn-primary">SAVE</button>
+              }
                  </Form>
                  </Col>
                  <Col xs="2">
@@ -139,26 +194,7 @@ export class AttendanceSettings extends React.Component {
 
                     </Col>
                  </Row>
-<p style={{marginTop:'3vw'}}>
-              <Link to="/AddLeave">
-              <button className="btn btn-outline-warning">
-              Save</button></Link>
 
-              <Link to="/AddLeave"  id={skipstyle}>Skip</Link>
-              <span className={floatRight} style={{position:'relative',top:'0.85vw'}}>
-
-
-              <Link to="/CompanyDetails" className={hyperLinkEmployee}>
-              <button type="button" class="btn btn-light">
-              <Icon icon={arrowLeft2} className={arrowIcon} size={14} />Prev </button>
-                </Link>
-
-
-              <Link to="/AddLeave" className={hyperLinkEmployee} >
-              <button type="button" class="btn btn-light">Next <Icon icon={arrowRight2} size={14} className={arrowIcon} /></button>
-              </Link>
-                 </span>
-                 </p>
 
              </div>
              <Footer/>

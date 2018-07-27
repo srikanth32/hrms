@@ -27,9 +27,6 @@ func claimsList(res http.ResponseWriter, req *http.Request) {
 		//code = 1
 		//msg = "error connecting to db"
 	}
-
-	//var js Claims
-
 	//err = db.QueryRow("select id, expense_name,amount,date, description from claims WHERE id = ?", js.ID).Scan(&js.ID, &js.ExpenseName, &js.Amount, &js.Date, &js.Description)
 	q := fmt.Sprintf("select id, expense_name,amount,date, description from claims ")
 	rows, err := db.Query(q)
@@ -41,6 +38,8 @@ func claimsList(res http.ResponseWriter, req *http.Request) {
 
 	log.Println(rows)
 	var x Claims
+	var x1 []Claims
+
 	for rows.Next() {
 		err = rows.Scan(&x.ID, &x.ExpenseName, &x.Amount, &x.Date, &x.Description)
 		if err != nil {
@@ -48,6 +47,7 @@ func claimsList(res http.ResponseWriter, req *http.Request) {
 			status = "false"
 			//msg = "error while scaning rows from table"
 		}
+		x1 = append(x1, x)
 	}
 
 	if err != nil {
@@ -55,13 +55,12 @@ func claimsList(res http.ResponseWriter, req *http.Request) {
 		status = "false"
 	}
 
-	w := Response{Status: status, Code: code, Message: x}
+	w := Response{Status: status, Code: code, Message: x1}
 	resp, err := json.Marshal(w)
 	if err != nil {
 		fmt.Println("error:", err)
 	}
 
-	//fmt.Println(string(resp))
 	fmt.Fprintf(res, string(resp))
 
 }
